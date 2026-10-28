@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0",
+  "purpose": "synthetic development fixtures, not a held-out evaluation set",
+  "split": "development",
+  "provenance": "Generated locally with ReportLab; all identities and transactions are fictional.",
+  "limitations": "Two closely related labelled layouts; no accuracy/generalization claim.",
+  "samples": [
+    {
+      "file": "digital_basic.pdf",
+      "sha256": "fbb1fa48529b03f8f0a79e0c4ea8c548ba074521dcebc349b59d4f020f0a0f7d",
+      "family": "labelled_development_v1",
+      "requires_ocr": false,
+      "ground_truth_headers": {
+        "vendor_name": "Cedar Office Supplies",
+        "customer_name": "Demo Learning Studio",
+        "invoice_number": "INV-000042",
+        "invoice_date": "2026-10-28",
+        "due_date": "2026-11-11",
+        "currency": "INR",
+        "subtotal": "2500.00",
+        "discount": "0.00",
+        "tax": "450.00",
+        "shipping": "0.00",
+        "total": "2950.00",
+        "amount_due": "2950.00"
+      }
+    },
+    {
+      "file": "digital_alternate.pdf",
+      "sha256": "9f4ad7c43f8fa9100d7dc65b723ba262e8dbc35edb8f1c216106afb5d57a7055",
+      "family": "labelled_development_v1",
+      "requires_ocr": false,
+      "ground_truth_headers": {
+        "vendor_name": "Birch Software Services",
+        "customer_name": "Demo Learning Studio",
+        "invoice_number": "BSS-000007",
+        "invoice_date": "2026-10-28",
+        "due_date": "2026-11-11",
+        "currency": "INR",
+        "subtotal": "2500.00",
+        "discount": "0.00",
+        "tax": "450.00",
+        "shipping": "0.00",
+        "total": "2950.00",
+        "amount_due": "2950.00"
+      }
+    },
+    {
+      "file": "missing_fields.pdf",
+      "sha256": "1d4b92bb44d6c184d4a2757b7109d5a5f91dc5f7805eaf2bd3857cc1fa31e091",
+      "family": "labelled_development_v1",
+      "requires_ocr": false,
+      "ground_truth_headers": {
+        "vendor_name": "Cedar Office Supplies",
+        "customer_name": "Demo Learning Studio",
+        "invoice_number": null,
+        "invoice_date": "2026-10-28",
+        "due_date": null,
+        "currency": null,
+        "subtotal": "2500.00",
+        "discount": "0.00",
+        "tax": "450.00",
+        "shipping": "0.00",
+        "total": null,
+        "amount_due": "2950.00"
+      }
+    },
+    {
+      "file": "scan_needs_ocr.pdf",
+      "sha256": "424207355f50d90b3d728b3a827a3e04898df993382ce14f1c508075aa4fba49",
+      "family": "labelled_development_v1",
+      "requires_ocr": true,
+      "ground_truth_headers": {
+        "vendor_name": "Cedar Office Supplies",
+        "customer_name": "Demo Learning Studio",
+        "invoice_number": "INV-000042",
+        "invoice_date": "2026-10-28",
+        "due_date": "2026-11-11",
+        "currency": "INR",
+        "subtotal": "2500.00",
+        "discount": "0.00",
+        "tax": "450.00",
+        "shipping": "0.00",
+        "total": "2950.00",
+        "amount_due": "2950.00"
+      }
+    },
+    {
+      "file": "mixed_needs_ocr.pdf",
+      "sha256": "cb15acc88267bbc8d0782185585a111cb988ee3b3dc37dca97a77feddba73a20",
+      "family": "labelled_development_v1",
+      "requires_ocr": true,
+      "ground_truth_headers": {
+        "vendor_name": "Cedar Office Supplies",
+        "customer_name": "Demo Learning Studio",
+        "invoice_number": "INV-000042",
+        "invoice_date": "2026-10-28",
+        "due_date": "2026-11-11",
+        "currency": "INR",
+        "subtotal": "2500.00",
+        "discount": "0.00",
+        "tax": "450.00",
+        "shipping": "0.00",
+        "total": "2950.00",
+        "amount_due": "2950.00"
+      }
+    }
+  ]
+}

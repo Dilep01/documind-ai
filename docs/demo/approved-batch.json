@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "invoices": [
+    {
+      "revision_id": "62db7712-fa44-47f9-bafa-7fd4737dce9b",
+      "document_id": "40fdf85f-cc50-41c2-ae05-ad955f4d3cca",
+      "tax": "450.00",
+      "total": "2950.00",
+      "currency": "INR",
+      "discount": "0.00",
+      "due_date": "2026-11-11",
+      "shipping": "0.00",
+      "subtotal": "2500.00",
+      "amount_due": "2950.00",
+      "line_items": [
+        {
+          "amount": "1000.00",
+          "quantity": "5",
+          "unit_price": "200.00",
+          "description": "Notebook packs"
+        },
+        {
+          "amount": "1500.00",
+          "quantity": "3",
+          "unit_price": "500.00",
+          "description": "Desk organizer sets"
+        }
+      ],
+      "totals_mode": "tax_exclusive",
+      "vendor_name": "Cedar Office Supplies",
+      "invoice_date": "2026-10-28",
+      "customer_name": "Demo Learning Studio",
+      "invoice_number": "INV-000042"
+    },
+    {
+      "revision_id": "93b35564-c430-4955-9c18-3e66bd2c7e9f",
+      "document_id": "a1a5fef4-8fb5-44d7-88c2-c27ed0aea004",
+      "tax": "450.00",
+      "total": "2950.00",
+      "currency": "INR",
+      "discount": "0.00",
+      "due_date": "2026-11-11",
+      "shipping": "0.00",
+      "subtotal": "2500.00",
+      "amount_due": "2950.00",
+      "line_items": [
+        {
+          "amount": "1000.00",
+          "quantity": "5",
+          "unit_price": "200.00",
+          "description": "Notebook packs"
+        },
+        {
+          "amount": "1500.00",
+          "quantity": "3",
+          "unit_price": "500.00",
+          "description": "Desk organizer sets"
+        }
+      ],
+      "totals_mode": "tax_exclusive",
+      "vendor_name": "Birch Software Services",
+      "invoice_date": "2026-10-28",
+      "customer_name": "Demo Learning Studio",
+      "invoice_number": "BSS-000007"
+    }
+  ]
+}

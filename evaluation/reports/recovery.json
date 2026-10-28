@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "counts": {
+    "documents": 7,
+    "revisions": 11,
+    "approvals": 3,
+    "exports": 3
+  },
+  "originals_verified": 5,
+  "scope": "separate PostgreSQL restoration, record counts, and original-file checksums"
+}

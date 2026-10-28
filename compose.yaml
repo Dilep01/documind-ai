@@ -1,0 +1,58 @@
+name: documind-ai
+services:
+  db:
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_DB: documind
+      POSTGRES_USER: documind
+      POSTGRES_PASSWORD: ${DOCUMIND_DB_PASSWORD:?Run scripts/setup.ps1 first}
+    volumes: [database:/var/lib/postgresql/data]
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U documind -d documind"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+    restart: unless-stopped
+  app:
+    image: documind-ai:local
+    build: .
+    init: true
+    environment: &app-environment
+      DOCUMIND_DATABASE_URL: postgresql+psycopg://documind:${DOCUMIND_DB_PASSWORD}@db:5432/documind
+      DOCUMIND_STORAGE: /app/storage
+      DOCUMIND_OLLAMA_URL: ${DOCUMIND_OLLAMA_URL:-http://host.docker.internal:11434}
+      DOCUMIND_EMBEDDING_MODEL: nomic-embed-text:latest
+      DOCUMIND_CHAT_MODEL: qwen3:1.7b
+      DOCUMIND_ADMIN_USERNAME: admin
+      DOCUMIND_ADMIN_PASSWORD: ${DOCUMIND_ADMIN_PASSWORD:?Run scripts/setup.ps1 first}
+      DOCUMIND_ORIGINS: http://localhost:8765,http://127.0.0.1:8765,http://localhost:5173,http://127.0.0.1:5173
+      DOCUMIND_ALLOW_SELF_APPROVAL: ${DOCUMIND_ALLOW_SELF_APPROVAL:-true}
+      DOCUMIND_COOKIE_SECURE: "false"
+    ports: ["127.0.0.1:8765:8765"]
+    extra_hosts: ["host.docker.internal:host-gateway"]
+    volumes: [documents:/app/storage, models:/app/models]
+    depends_on:
+      db: {condition: service_healthy}
+    command: [sh, -c, "python -m documind_ai.manage migrate && python -m documind_ai.manage seed && python -m documind_ai.manage train && exec uvicorn documind_ai.api:app --host 0.0.0.0 --port 8765 --no-access-log"]
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://localhost:8765/api/v1/ready',timeout=3)"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+      start_period: 20s
+    restart: unless-stopped
+  worker:
+    image: documind-ai:local
+    pull_policy: never
+    init: true
+    environment: *app-environment
+    extra_hosts: ["host.docker.internal:host-gateway"]
+    volumes: [documents:/app/storage, models:/app/models]
+    depends_on:
+      app: {condition: service_healthy}
+    command: [python, -m, documind_ai.worker]
+    restart: unless-stopped
+volumes:
+  database:
+  documents:
+  models:

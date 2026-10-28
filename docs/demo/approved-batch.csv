@@ -1,0 +1,3 @@
+revision_id,document_id,vendor_name,invoice_number,invoice_date,currency,total
+62db7712-fa44-47f9-bafa-7fd4737dce9b,40fdf85f-cc50-41c2-ae05-ad955f4d3cca,Cedar Office Supplies,INV-000042,2026-10-28,INR,2950.00
+93b35564-c430-4955-9c18-3e66bd2c7e9f,a1a5fef4-8fb5-44d7-88c2-c27ed0aea004,Birch Software Services,BSS-000007,2026-10-28,INR,2950.00

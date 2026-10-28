@@ -1,0 +1,232 @@
+{
+  "scope": "controlled synthetic development regression, not held-out real-document accuracy",
+  "fixtures": [
+    {
+      "name": "digital_basic.pdf",
+      "document_id": "40fdf85f-cc50-41c2-ae05-ad955f4d3cca",
+      "status": "succeeded",
+      "header_matches": 12,
+      "header_count": 12,
+      "field_matches": {
+        "vendor_name": true,
+        "customer_name": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "due_date": true,
+        "currency": true,
+        "subtotal": true,
+        "discount": true,
+        "tax": true,
+        "shipping": true,
+        "total": true,
+        "amount_due": true
+      },
+      "methods": [
+        "native"
+      ],
+      "duration_ms": 2109,
+      "index_status": "semantic_ready",
+      "issues": [
+        "possible_duplicate"
+      ]
+    },
+    {
+      "name": "digital_alternate.pdf",
+      "document_id": "a1a5fef4-8fb5-44d7-88c2-c27ed0aea004",
+      "status": "succeeded",
+      "header_matches": 12,
+      "header_count": 12,
+      "field_matches": {
+        "vendor_name": true,
+        "customer_name": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "due_date": true,
+        "currency": true,
+        "subtotal": true,
+        "discount": true,
+        "tax": true,
+        "shipping": true,
+        "total": true,
+        "amount_due": true
+      },
+      "methods": [
+        "native"
+      ],
+      "duration_ms": 1877,
+      "index_status": "semantic_ready",
+      "issues": []
+    },
+    {
+      "name": "missing_fields.pdf",
+      "document_id": "4341ecf2-3991-4d54-ba6c-afce176a20a7",
+      "status": "succeeded",
+      "header_matches": 12,
+      "header_count": 12,
+      "field_matches": {
+        "vendor_name": true,
+        "customer_name": true,
+        "invoice_number": true,
+        "invoice_date": true,
+        "due_date": true,
+        "currency": true,
+        "subtotal": true,
+        "discount": true,
+        "tax": true,
+        "shipping": true,
+        "total": true,
+        "amount_due": true
+      },
+      "methods": [
+        "native"
+      ],
+      "duration_ms": 1779,
+      "index_status": "semantic_ready",
+      "issues": [
+        "required_field",
+        "required_field",
+        "required_field",
+        "incomplete_totals_check"
+      ]
+    },
+    {
+      "name": "scan_needs_ocr.pdf",
+      "document_id": "d02f9224-fd27-4655-bd7d-3ee0e15a1fc0",
+      "status": "succeeded",
+      "header_matches": 9,
+      "header_count": 12,
+      "field_matches": {
+        "vendor_name": true,
+        "customer_name": false,
+        "invoice_number": false,
+        "invoice_date": false,
+        "due_date": true,
+        "currency": true,
+        "subtotal": true,
+        "discount": true,
+        "tax": true,
+        "shipping": true,
+        "total": true,
+        "amount_due": true
+      },
+      "methods": [
+        "ocr"
+      ],
+      "duration_ms": 2873,
+      "index_status": "semantic_ready",
+      "issues": [
+        "required_field",
+        "missing_items",
+        "incomplete_totals_check"
+      ]
+    },
+    {
+      "name": "mixed_needs_ocr.pdf",
+      "document_id": "04c846cc-d58f-45c2-9d54-d39f660d424d",
+      "status": "succeeded",
+      "header_matches": 11,
+      "header_count": 12,
+      "field_matches": {
+        "vendor_name": true,
+        "customer_name": true,
+        "invoice_number": false,
+        "invoice_date": true,
+        "due_date": true,
+        "currency": true,
+        "subtotal": true,
+        "discount": true,
+        "tax": true,
+        "shipping": true,
+        "total": true,
+        "amount_due": true
+      },
+      "methods": [
+        "native",
+        "ocr"
+      ],
+      "duration_ms": 3031,
+      "index_status": "semantic_ready",
+      "issues": [
+        "required_field",
+        "incomplete_totals_check"
+      ]
+    }
+  ],
+  "checks": {
+    "approved_csv_export": "passed",
+    "approved_json_export": "passed",
+    "exact_invoice_filter": true,
+    "local_suggestions": {
+      "status": 200,
+      "count": 12
+    }
+  },
+  "model_checks": [
+    {
+      "question": "What is the invoice total?",
+      "status": 200,
+      "expectation": "2950",
+      "regression_passed": true,
+      "answer": {
+        "answer": "The invoice total is INR 2950.00.",
+        "citations": [
+          {
+            "id": "9ce94646-297f-480e-b408-902697980529",
+            "document_id": "40fdf85f-cc50-41c2-ae05-ad955f4d3cca",
+            "name": "digital_basic.pdf",
+            "page_number": 1,
+            "text": "DOCUMIND AI Synthetic invoice | Development fixture Vendor: Cedar Office Supplies Customer: Demo Learning Studio Invoice Number: INV-000042 Invoice Date: 2026-10-28 Due Date: 2026-11-11 Currency: INR Description Qty Unit price Amount Notebook packs 5 200.00 1000.00 Desk organizer sets 3 500.00 1500.00 Subtotal: INR 2500.00 Discount: INR 0.00 Tax: INR 450.00 Shipping: INR 0.00 Total: INR 2950.00 Amount Due: INR 2950.00 Fictional parties. No real transaction. Not a tax invoice. Review every extracted field and line item against this original."
+          }
+        ],
+        "abstained": false,
+        "notice": "Experimental local model answer. Verify the cited evidence."
+      },
+      "duration_seconds": 9.98
+    },
+    {
+      "question": "What bank account number is printed on this invoice?",
+      "status": 200,
+      "expectation": "abstain",
+      "regression_passed": true,
+      "answer": {
+        "answer": "The retrieved documents do not provide enough evidence to answer.",
+        "citations": [],
+        "abstained": true
+      },
+      "duration_seconds": 8.54
+    }
+  ],
+  "retrieval_regressions": [
+    {
+      "query": "Birch Software Services",
+      "status": 200,
+      "expected_document_in_top5": true,
+      "supporting_vendor_quote_in_top5": true,
+      "note": "Duplicate uploads can contain the same evidence; quote relevance is reported separately from a particular upload ID."
+    },
+    {
+      "query": "Cedar Office Supplies",
+      "status": 200,
+      "expected_document_in_top5": true,
+      "supporting_vendor_quote_in_top5": true,
+      "note": "Duplicate uploads can contain the same evidence; quote relevance is reported separately from a particular upload ID."
+    }
+  ],
+  "dashboard": {
+    "documents": 8,
+    "approved": 2,
+    "needs_review": 6,
+    "approved_total_inr": "5900.00"
+  },
+  "model_status": {
+    "available": true,
+    "embedding_model": "nomic-embed-text:latest",
+    "chat_model": "qwen3:1.7b",
+    "installed": [
+      "qwen3:1.7b",
+      "nomic-embed-text:latest",
+      "qwen3:4b",
+      "qwen3.5:4b"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+.git
+.venv
+frontend/node_modules
+frontend/dist
+storage
+models
+backups
+tmp
+output
+.env
+.env.*
+**/__pycache__
+**/*.egg-info
+.pytest_cache
+.ruff_cache
+.firecrawl

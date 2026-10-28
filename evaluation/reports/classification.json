@@ -1,0 +1,131 @@
+{
+  "seed": 42,
+  "scope": "synthetic English TEXT classification only; no OCR or real-document accuracy claim",
+  "split_policy": "disjoint template families; all variants stay in one split",
+  "abstention_threshold": 0.55,
+  "threshold_note": "Fixed conservative starting threshold; not calibrated for real documents.",
+  "counts": {
+    "train": 180,
+    "validation": 60,
+    "test": 60
+  },
+  "validation": {
+    "classification": {
+      "invoice": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "other": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "receipt": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 60.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 60.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        20,
+        0,
+        0
+      ],
+      [
+        0,
+        20,
+        0
+      ],
+      [
+        0,
+        0,
+        20
+      ]
+    ],
+    "labels": [
+      "invoice",
+      "other",
+      "receipt"
+    ],
+    "accepted": 59,
+    "total": 60
+  },
+  "test": {
+    "classification": {
+      "invoice": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "other": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "receipt": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 60.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 60.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        20,
+        0,
+        0
+      ],
+      [
+        0,
+        20,
+        0
+      ],
+      [
+        0,
+        0,
+        20
+      ]
+    ],
+    "labels": [
+      "invoice",
+      "other",
+      "receipt"
+    ],
+    "accepted": 46,
+    "total": 60
+  },
+  "artifact_sha256": "42670911c736bf3ec9a8f849736854ca841b1447fb9706ffed0af5aff2985484"
+}

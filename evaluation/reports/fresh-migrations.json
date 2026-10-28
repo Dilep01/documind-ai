@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "revision": "0002",
+  "tables": 14,
+  "schema_differences": 0,
+  "idempotent_second_upgrade": true,
+  "scope": "new, separately named database; application records untouched"
+}
