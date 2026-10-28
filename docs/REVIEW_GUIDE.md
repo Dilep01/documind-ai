@@ -16,4 +16,4 @@ Open http://localhost:8765. Sign in as `admin` using `DOCUMIND_ADMIN_PASSWORD` f
 
 See `docs/demo/overview.png`, `review.png`, `mobile.png`, and the short actual browser recording `walkthrough.webm`. The recording is an automated acceptance journey, not a production customer demonstration.
 
-Read `RELEASE_VERIFICATION.md` for measured results and `limitations.md` for scope. Source, tests, setup scripts, and evidence are prepared locally for review; no public GitHub repository or hosted production deployment has been created.
+Read `RELEASE_VERIFICATION.md` for measured results and `limitations.md` for scope. Source, tests, setup scripts, and evidence are published at [Dilep01/documind-ai](https://github.com/Dilep01/documind-ai). The application runs locally; no hosted production deployment is claimed.

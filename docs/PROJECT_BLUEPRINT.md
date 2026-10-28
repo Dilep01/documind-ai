@@ -478,7 +478,7 @@ Keep private documents out of Git, release archives, screenshots, benchmark arti
 
 ### Repository
 
-Suggested repository name: documind-ai. No repository has been created or published yet.
+Repository: [Dilep01/documind-ai](https://github.com/Dilep01/documind-ai). The following describes the original publication checklist.
 
 The README should explain the problem and supported scope, show a short demo, include the architecture diagram, list free dependencies and setup steps, run a sample invoice, describe test/benchmark commands, report measured results, and link known limitations and licensing notices.
 

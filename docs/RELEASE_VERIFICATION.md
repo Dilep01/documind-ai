@@ -1,6 +1,6 @@
 # DocuMind AI v0.1.0 local release candidate
 
-Verified on 28 October 2026. Local application and source release prepared for review. No public repository, hosted production service, or real customer usage is claimed.
+Local release candidate verified on 28 October 2026. Source repository: [Dilep01/documind-ai](https://github.com/Dilep01/documind-ai). This application runs locally. No hosted production service or real customer usage is claimed.
 
 ## Implemented scope
 
@@ -68,8 +68,8 @@ Observed model digests:
 
 The recovery snapshot restored 7 documents, 11 revisions, 3 decisions, 3 exports, and 5 shared original blobs in a separate temporary database. Later acceptance runs add more fictional records; those counts describe the snapshot, not a permanent dashboard value. Only the safe restoration result is included in the repository. The private backup/configuration is ignored.
 
-Dependencies are pinned in lockfiles. Container base tags still receive upstream updates; this is not a byte-for-byte reproducible operating-system claim. GitHub Actions checks are configured but have not been run on a remote repository. Local evidence is authoritative for this release.
+Dependencies are pinned in lockfiles. Container base tags still receive upstream updates; this is not a byte-for-byte reproducible operating-system claim. [GitHub Actions](https://github.com/Dilep01/documind-ai/actions/workflows/checks.yml) repeats backend and frontend checks on repository pushes; the workflow page records its current status. The local results above describe the original release verification.
 
 ## Review and publication
 
-Open `REVIEW_GUIDE.md`, the live local application, screenshots, and the short browser recording. Read `limitations.md` before using private documents or making portfolio claims. Source, synthetic fixtures, tests, reports, setup/recovery scripts, and presentation material are prepared locally. Public GitHub/portfolio publication can follow review.
+Open `REVIEW_GUIDE.md`, the local application, screenshots, and the short browser recording. Read `limitations.md` before using private documents or making portfolio claims. Source, synthetic fixtures, tests, reports, setup/recovery scripts, and presentation material are available in the public repository. Portfolio-site publication is a separate step.

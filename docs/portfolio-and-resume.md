@@ -6,7 +6,7 @@ DocuMind AI is a local invoice-processing and review application built with Pyth
 
 Validation uses fictional invoice fixtures and synthetic text classification data. The controlled scan benchmark exposes OCR errors; local AI remains experimental. There is no production deployment or real customer usage claim.
 
-When publishing the project card, link the source repository once created, the demo recording/screenshots, architecture, setup instructions, and release verification. Avoid an unsupported “99% accurate” or time-savings headline.
+When publishing the project card, link [the source repository](https://github.com/Dilep01/documind-ai), the demo recording/screenshots, architecture, setup instructions, and release verification. Avoid an unsupported “99% accurate” or time-savings headline.
 
 ## Resume bullets for the completed local project
 

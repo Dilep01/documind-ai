@@ -1,5 +1,9 @@
 # DocuMind AI
 
+[![Project checks](https://github.com/Dilep01/documind-ai/actions/workflows/checks.yml/badge.svg)](https://github.com/Dilep01/documind-ai/actions/workflows/checks.yml)
+
+[GitHub repository](https://github.com/Dilep01/documind-ai) · [Review guide](docs/REVIEW_GUIDE.md) · [Verification and limitations](docs/RELEASE_VERIFICATION.md)
+
 Local document intelligence and invoice review using Python, FastAPI, PostgreSQL, Tesseract OCR, and React. No paid API key is required. This is a learning and portfolio application; validation uses fictional documents and synthetic text datasets.
 
 ## Run on Windows
